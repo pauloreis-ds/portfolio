@@ -91,9 +91,18 @@ p {
 	border: 2px solid var(--primary-color);
 	color: var(--primary-color);
 }
+.buttons .primary-button:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
 .buttons svg {
 	width: 50px;
 	color: var(--primary-color);
+}
+.buttons svg:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
 /* Hero Section */
