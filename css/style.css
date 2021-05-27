@@ -548,6 +548,7 @@ p {
 #projects .item .right .project-desc {
 	color: var(--secondary-gray);
 	margin-bottom: 3rem;
+	text-align: justify;
 }
 #projects .item .right .external-link {
 	display: flex;
