@@ -590,6 +590,10 @@ p {
 	}
 }
 
+#more_projects {
+    align-items: center;
+	justify-content: center;
+}
 
 /* Footer Section */
 .footer {
