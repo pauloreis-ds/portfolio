@@ -72,13 +72,23 @@ body.dark-theme {
     color: var(--title-color);
 }
 
-/*========== Font size variables to scale cv ==========*/
-
 
 /*========== Generate PDF button ==========*/
+.generate-pdf {
+    display: none;
+    position: absolute;
+    top: 2.2rem;
+    left: 0;
+    font-size: 1.2rem;
+    color: #707070; /* var(--text-color) */
+    cursor: pointer;
+}
+
+.generate-pdf:hover {
+    color: var(--title-color);
+}
 
 
-/*========== Classes modified to reduce size and print on A4 sheet ==========*/
 body {
     margin: 0 0 var(--header-height) 0;
     padding: 0;
@@ -477,6 +487,10 @@ img {
         padding: 0 1.5rem;
     }
 
+    .generate-pdf {
+        display: inline-block;
+    }
+
     .resume__right .section-title {
         text-align: initial;
     }
@@ -491,6 +505,7 @@ img {
     .home__button-movil {
         display: none;
     }
+
 
 }
 
