@@ -29,6 +29,7 @@
   --mb-1: .5rem;
   --mb-2: 1rem;
   --mb-3: 1.5rem;
+  --mb-4: 2.5rem;
 
   /*========== z index ==========*/
   --z-tooltip: 10;
@@ -45,11 +46,31 @@ html {
     scroll-behavior: smooth;
 }
 
+
 /*========== Variables Dark theme ==========*/
+body.dark-theme {
+  --title-color: #F2F2F2;
+  --text-color: #BFBFBF;
+  --container-color: #212121;
+  --container-color-alt: #181616;
+  --body-color: #2B2B2B;
+}
 
 
 /*========== Button Dark/Light ==========*/
+.change-theme {
+    position: absolute;
+    right: 0;
+    top: 2.2rem;
+    display: flex;
+    color: #707070; /* var(--text-color) */
+    font-size: 1.2rem;
+    cursor: pointer;
+}
 
+.change-theme:hover {
+    color: var(--title-color);
+}
 
 /*========== Font size variables to scale cv ==========*/
 
@@ -292,7 +313,6 @@ img {
 /*========== PROFILE ==========*/
 .profile__description {
     text-align: justify; /*center*/
-
 }
 
 
@@ -354,13 +374,17 @@ img {
 }
 
 .skills__content {
-    gap: 0;
+    gap: 2;
 }
 
 .skills__name {
     display: flex;
     align-items: center;
     margin-bottom: var(--mb-3);
+}
+
+.skills__name h3 {
+    margin-left: var(--mb-4);
 }
 
 .skills__circle {
@@ -370,26 +394,103 @@ img {
     background-color: var(--text-color);
     border-radius: 50%;
     margin-right: .75rem;
+    margin-left: var(--mb-3);
 }
 
 
-
-
-
 /*========== CERTIFICATES ==========*/
+.certificate__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-1);
+}
 
 
 /*========== REFERENCES ==========*/
-
-
 /*========== INTERESTS ==========*/
 
 
 /* Scroll top */
+.scrolltop {
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .3rem;
+    background-color: var(--container-color-alt);
+    border-radius: .4rem;
+    z-index: var(--z-tooltip);
+    transition: .4s;
+    visibility: hidden;
+}
+
+.scrolltop__icon {
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.show-scroll {
+    visibility: visible;
+    bottom: 5rem;
+}
 
 
 /*========== MEDIA QUERIES ==========*/
 /* For small devices, menu two columns */
-
+@media screen and (max-width: 320px){
+    .nav__list  {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem .5rem;
+    }
+}
 
 /* Classes modified for large screen size */
+@media screen and (min-width: 968px){
+    body {
+        margin: 3rem 0;
+    }
+
+    .bd-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .l-header,
+    .scrolltop {
+        display: none;
+    }
+
+    .resume {
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+        background-color: var(--container-color);
+        box-shadow: 0 0 8px rgba(13, 12, 12, .15);
+    }
+
+    .resume__left {
+        background-color: var(--container-color-alt);
+    }
+
+    .resume__left,
+    .resume__right {
+        padding: 0 1.5rem;
+    }
+
+    .resume__right .section-title {
+        text-align: initial;
+    }
+    .profile__description {
+        text-align: justify;
+    }
+
+    .home__container {
+        gap: 1.5rem;
+    }
+
+    .home__button-movil {
+        display: none;
+    }
+
+}
+
