@@ -261,6 +261,15 @@ img {
     font-size: var(--h1-font-size);
 }
 
+.home__title a {
+    color: #643dd1;
+}
+
+.home__title a:hover {
+    color: #7c5bd9;
+}
+
+
 .home__profession {
     font-size: var(--normal-font-size);
     margin-bottom: var(--mb-1);
@@ -414,6 +423,10 @@ img {
     margin-bottom: var(--mb-1);
 }
 
+.certificate__description a {
+    color: var(--text-color);
+}
+
 
 /*========== REFERENCES ==========*/
 /*========== INTERESTS ==========*/
@@ -509,3 +522,13 @@ img {
 
 }
 
+
+/*========== Temporary IDs ==========*/
+
+#projeto_link {
+    color: #643dd1;
+}
+
+#projeto_link:hover {
+    color: #7c5bd9;
+}
