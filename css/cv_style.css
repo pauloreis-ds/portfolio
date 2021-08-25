@@ -382,6 +382,10 @@ img {
     color: var(--title-color);
 }
 
+.experience__descripition{
+    text-align: justify;
+}
+
 .education__year {
     font-size: var(--smaller-font-size);
 }
